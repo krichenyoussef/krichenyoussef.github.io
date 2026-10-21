@@ -52,7 +52,15 @@
   nav ul a { color: var(--muted); }
   @media (max-width: 560px) { nav ul { gap: 12px; font-size: 14px; } nav .brand { display: none; } }
 
-  header { padding: 72px 0 48px; }
+  header { padding: 72px 0 48px; display: flex; align-items: center; gap: 40px; }
+  header .avatar {
+    flex: none; width: 168px; height: 168px; border-radius: 50%;
+    object-fit: cover; border: 1px solid var(--line);
+  }
+  @media (max-width: 680px) {
+    header { flex-direction: column; align-items: flex-start; gap: 24px; padding-top: 48px; }
+    header .avatar { width: 120px; height: 120px; }
+  }
   header h1 { font-size: clamp(32px, 6vw, 48px); line-height: 1.1; margin: 0 0 8px; }
   header .role { font-size: 20px; color: var(--accent); font-weight: 600; margin: 0 0 20px; }
   header p.lead { font-size: 18px; color: var(--muted); max-width: 640px; margin: 0 0 28px; }
@@ -111,6 +119,8 @@
 <div class="wrap">
 
   <header>
+    <img class="avatar" src="photo.jpg" alt="Photo de Youssef Krichen" width="168" height="168">
+    <div>
     <h1>Youssef Krichen</h1>
     <p class="role">Ingénieur IA / ML Engineer</p>
     <p class="lead">
@@ -123,6 +133,7 @@
       <a class="btn" href="https://github.com/krichenyoussef">GitHub</a>
       <a class="btn" href="https://www.linkedin.com/in/youssef-krichen/">LinkedIn</a>
       <a class="btn" href="mailto:youssefkrichen6@gmail.com">E-mail</a>
+    </div>
     </div>
   </header>
 
